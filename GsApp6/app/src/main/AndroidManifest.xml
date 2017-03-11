@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".VolleyApplication"
@@ -24,6 +25,13 @@
         <activity android:name=".WebActivity" />
         <activity android:name=".UserActivity" />
         <activity android:name=".PostActivity"></activity>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <!--GrowthHack(ABテスト)で追加ここから-->
+        <service android:name = "com.kii.cloud.analytics.EventUploadService" />
+        <!--GrowthHack(ABテスト)で追加ここまで-->
+
     </application>
 
 </manifest>
